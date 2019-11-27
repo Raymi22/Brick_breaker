@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1574891558 source:d:\onedrive - student.utcluj.ro\projects\info\brick_breaker\test\main.cpp
+	<stdio.h>
+	<graphics.h>
+	"bball.h"
+
+1574891542 d:\onedrive - student.utcluj.ro\projects\info\brick_breaker\test\bball.h
+	<graphics.h>
+
+1574891542 source:d:\onedrive - student.utcluj.ro\projects\info\brick_breaker\test\bball.cpp
+	<graphics.h>
+	"bball.h"
+
