@@ -49,8 +49,8 @@ void setSpeed(s_ball &ball, s_map map, s_platform platform)
 {
     int be=touchBorder(ball, map);
     int pe=touchPlatform(ball, platform);
-    if (be==1 || be==2 || pe==4) ball.xSpeed=0-ball.xSpeed;             //iverses speed on x axe
-    else if (be==3 || be==4 || pe==1) ball.ySpeed=0-ball.ySpeed;        //iverses speed on y axe
+    if (be==1 || be==2 || pe==4) ball.xSpeed=0-ball.xSpeed;             //inverses speed on x axe
+    else if (be==3 || be==4 || pe==1) ball.ySpeed=0-ball.ySpeed;        //inverses speed on y axe
     else if (be==5 || be==7 || be==6 || be==8 || pe==2 || pe==3)        // inverses speed on both axes
     {
         ball.xSpeed=0-ball.xSpeed;
