@@ -9,12 +9,12 @@ using namespace std;
 int wx=500, wy=600;
 ///////////////////////////////////////////////////////////////////////////////////////
 
-//////////////////////////////// Object parameters ///////////////////////////////////////
-s_ball ball ={0, 0, 20, 2, -2};
-s_platform platform ={wx/2-40, wy-5-25, wx/2+40, wy-5};
-s_map map={0, 50, wx, wy};
+//////////////////////////////// Object parameters ////////////////////////////////////
+s_ball ball ={0, 0, 20, 2, -2}; //ball
+s_platform platform ={wx/2-40, wy-5-25, wx/2+40, wy-5}; // platform
+s_map map={0, 50, wx, wy};  // map
 int ps=2;
-////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -30,7 +30,9 @@ int main()
     platform.top=wy-5-25;
     platform.right=wx/2+40;
     platform.bottom=wy-5;
+
     char c=getch();
+
     int page=0;
 
     while (c!='x')
@@ -55,6 +57,7 @@ int main()
         // move the ball
         moveBall(ball);
 
+        //moving the platform
         if (GetAsyncKeyState(VK_RIGHT)) {platform.left+=ps; platform.right+=ps;}
         if (GetAsyncKeyState(VK_LEFT)) {platform.left-=ps; platform.right-=ps;}
 
