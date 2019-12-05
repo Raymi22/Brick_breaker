@@ -3,6 +3,7 @@
 #include "bball.h"
 #include "bplatform.h"
 #include "bmap.h"
+#include "bscore.h"
 
 using namespace std;
 ////////////////////////////////// Window parameters //////////////////////////////////
@@ -12,8 +13,10 @@ int wx=500, wy=600;
 //////////////////////////////// Object parameters ////////////////////////////////////
 s_ball ball ={0, 0, 20, 2, -2}; //ball
 s_platform platform ={wx/2-40, wy-5-25, wx/2+40, wy-5}; // platform
-s_map map={0, 50, wx, wy};  // map
+s_map map={0, 50, wx-1, wy};  // map
 int ps=2;
+s_brick wall[20];
+char mes[15]="Score: ";
 ///////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -21,15 +24,11 @@ int ps=2;
 
 int main()
 {
+
     initwindow(wx,wy);
 
     ball.x=getmaxx()/2;
     ball.y=200;
-    platform ={wx/2-40, wy-5-25, wx/2+40, wy-5};
-    platform.left=wx/2-40;
-    platform.top=wy-5-25;
-    platform.right=wx/2+40;
-    platform.bottom=wy-5;
 
     char c=getch();
 
@@ -43,7 +42,8 @@ int main()
         setvisualpage(1-page);
         /////////////////////
 
-        rectangle(0, 0, wx, map.top);
+        drawScoreboard(wall);
+        drawMap(map);
 
         //draw the filled circle
         drawBall(ball);
