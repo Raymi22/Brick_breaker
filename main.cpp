@@ -4,6 +4,9 @@
 #include "bplatform.h"
 #include "bmap.h"
 #include "bscore.h"
+#include "bbrick2.h"
+
+
 
 using namespace std;
 ////////////////////////////////// Window parameters //////////////////////////////////
@@ -11,11 +14,11 @@ int wx=500, wy=600;
 ///////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////// Object parameters ////////////////////////////////////
-s_ball ball ={0, 0, 20, 2, -2}; //ball
+s_ball ball ={0, 0, 20, 1, -1}; //ball
 s_platform platform ={wx/2-40, wy-5-25, wx/2+40, wy-5}; // platform
 s_map map={0, 50, wx-1, wy};  // map
-int ps=2;
-s_brick wall[20];
+int ps=1; //steps
+s_brick wall[4][5];
 char mes[15]="Score: ";
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -28,10 +31,10 @@ int main()
     initwindow(wx,wy);
 
     ball.x=getmaxx()/2;
-    ball.y=200;
+    ball.y=400;
 
     char c=getch();
-
+    initWall(map, wall);
     int page=0;
 
     while (c!='x')
@@ -42,33 +45,32 @@ int main()
         setvisualpage(1-page);
         /////////////////////
 
+
+
+
+
+        //draw the objects
         drawScoreboard(wall);
         drawMap(map);
-
-        //draw the filled circle
         drawBall(ball);
-
-        bar (platform.left, platform.top, platform.right, platform.bottom);
-
+        drawWall(wall);
+        drawPlatform(platform);
 
         //check for events and change direction
-        setSpeed(ball, map, platform);
+        setSpeed(ball, touchPlatform(ball, platform), touchMap(map, ball), touchBrick(ball, wall));
 
-        // move the ball
+        // move objects
         moveBall(ball);
-
-        //moving the platform
-        if (GetAsyncKeyState(VK_RIGHT)) {platform.left+=ps; platform.right+=ps;}
-        if (GetAsyncKeyState(VK_LEFT)) {platform.left-=ps; platform.right-=ps;}
-
-
+        movePlatform(platform, map);
 
         // page management //
         page=1-page;
         /////////////////////
 
-        delay(3);
+        delay(1);
+        //getch();
     }
+
     return 0;
 }
 

@@ -7,7 +7,9 @@
 //returns 1 when there is collision
 int touchCorner(s_ball ball, int x, int y);
 
-int touchLine(s_ball ball, int x1, int y1, int x2, int y2);
+int touchHorizontalLine(s_ball ball, int x1, int y1, int x2, int y2);
+//int touchLine(s_ball ball, int x1 , int y1 ,int x2 ,int y2);
+int touchVerticalLine(s_ball ball, int x1, int y1, int x2, int y2);
 
 int touchMapCorner(s_ball ball, int x, int y);
 

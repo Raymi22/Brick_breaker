@@ -1,6 +1,9 @@
 #ifndef BMAP_H_INCLUDED
 #define BMAP_H_INCLUDED
 
+#include "bball.h"
+#include "bcollisions.h"
+
 typedef struct
 {
     int left, top, right, bottom;
@@ -8,8 +11,8 @@ typedef struct
 
 void drawMap(s_map map);
 
-int touchBorder1()
-//int getScore(s_brick brick[20]);
+int touchMap(s_map map, s_ball ball);
+
 
 
 #endif // BMAP_H_INCLUDED

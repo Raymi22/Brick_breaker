@@ -1,9 +1,7 @@
 #include <graphics.h>
 #include "bball.h"
-#include "bplatform.h"
-#include "bmap.h"
 
-int touchBorder(s_ball ball, s_map map)
+/*int touchBorder(s_ball ball, s_map map)
 {
     // Checks for any collision between ball and borders //
     int state=0;
@@ -23,10 +21,10 @@ int touchBorder(s_ball ball, s_map map)
     else if (ball.y-ball.r<=map.top) state = 4;             // top -> 4
     return state;
 }
-
+*/
 
 //  REBUT !!!!!!!!
-int touchPlatform(s_ball ball, s_platform platform) //  REBUT !!!!!!!!
+/*int touchPlatform(s_ball ball, s_platform platform) //  REBUT !!!!!!!!
 {
     int state=0;                                            // 0 if ball and platform do not collide
     if (ball.y+ball.r==platform.top)
@@ -43,15 +41,15 @@ int touchPlatform(s_ball ball, s_platform platform) //  REBUT !!!!!!!!
         if (ball.x-ball.r==platform.right || ball.x+ball.r==platform.left) state=4; //other sides of the ball touch the platform
     }
     return state;
-}
+}*/
 
-void setSpeed(s_ball &ball, s_map map, s_platform platform)
+
+
+void setSpeed(s_ball &ball, int platformEvent, int mapEvent, int brickEvent)
 {
-    int be=touchBorder(ball, map);
-    int pe=touchPlatform(ball, platform);
-    if (be==1 || be==2 || pe==4) ball.xSpeed=0-ball.xSpeed;             //inverses speed on x axe
-    else if (be==3 || be==4 || pe==1) ball.ySpeed=0-ball.ySpeed;        //inverses speed on y axe
-    else if (be==5 || be==7 || be==6 || be==8 || pe==2 || pe==3)        // inverses speed on both axes
+    if (platformEvent==2 || mapEvent==2 || brickEvent==2) ball.xSpeed=0-ball.xSpeed;       //inverses speed on x axe
+    else if (platformEvent==3 || mapEvent==3 || brickEvent==3) ball.ySpeed=0-ball.ySpeed;        //inverses speed on y axe
+    else if (platformEvent==1 || mapEvent==1 || brickEvent==1)        // inverses speed on both axes
     {
         ball.xSpeed=0-ball.xSpeed;
         ball.ySpeed=0-ball.ySpeed;
