@@ -6,6 +6,7 @@
 #ifndef BSCORE_H_INCLUDED
 #define BSCORE_H_INCLUDED
 
+
 #include "bbrick2.h"
 
 int getScore(s_brick wall[4][5]);

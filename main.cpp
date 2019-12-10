@@ -4,6 +4,7 @@
 #include "bplatform.h"
 #include "bmap.h"
 #include "bscore.h"
+
 #include "bbrick2.h"
 
 
@@ -17,7 +18,6 @@ int wx=500, wy=600;
 s_ball ball ={0, 0, 20, 1, -1}; //ball
 s_platform platform ={wx/2-40, wy-5-25, wx/2+40, wy-5}; // platform
 s_map map={0, 50, wx-1, wy};  // map
-int ps=1; //steps
 s_brick wall[4][5];
 char mes[15]="Score: ";
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -31,6 +31,7 @@ int main()
     initwindow(wx,wy);
 
     ball.x=getmaxx()/2;
+
     ball.y=400;
 
     char c=getch();
@@ -44,11 +45,6 @@ int main()
         cleardevice();
         setvisualpage(1-page);
         /////////////////////
-
-
-
-
-
         //draw the objects
         drawScoreboard(wall);
         drawMap(map);
