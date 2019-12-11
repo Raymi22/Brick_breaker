@@ -65,5 +65,15 @@ void moveBall( s_ball &ball )
 void drawBall( s_ball &ball )
 {
     circle( ball.x, ball.y, ball.r );
-    floodfill( ball.x, ball.y, 15 );
+    //floodfill( ball.x, ball.y, 15 );
+}
+
+void initBall(s_ball &ball)
+{
+    int ps=1; //step value
+    ball.x=500/2;
+    ball.y=400;
+    ball.r=20;
+    ball.xSpeed=ps;
+    ball.ySpeed=-ps;
 }

@@ -4,8 +4,8 @@
 #include "bplatform.h"
 #include "bmap.h"
 #include "bscore.h"
-
 #include "bbrick2.h"
+#include "initwin.h"
 
 
 
@@ -13,13 +13,12 @@ using namespace std;
 ////////////////////////////////// Window parameters //////////////////////////////////
 int wx=500, wy=600;
 ///////////////////////////////////////////////////////////////////////////////////////
-
 //////////////////////////////// Object parameters ////////////////////////////////////
-s_ball ball ={0, 0, 20, 1, -1}; //ball
+s_ball ball; //ball
 s_platform platform ={wx/2-40, wy-5-25, wx/2+40, wy-5}; // platform
 s_map map={0, 50, wx-1, wy};  // map
+
 s_brick wall[4][5];
-char mes[15]="Score: ";
 ///////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -27,44 +26,55 @@ char mes[15]="Score: ";
 
 int main()
 {
-
     initwindow(wx,wy);
-
-    ball.x=getmaxx()/2;
-
-    ball.y=400;
-
-    char c=getch();
-    initWall(map, wall);
+    char key=getch();
     int page=0;
 
-    while (c!='x')
+    int score=0;
+
+    while(key!='x')
     {
-        // page management //
-        setactivepage(page);
-        cleardevice();
-        setvisualpage(1-page);
-        /////////////////////
-        //draw the objects
-        drawScoreboard(wall);
-        drawMap(map);
-        drawBall(ball);
-        drawWall(wall);
-        drawPlatform(platform);
+        startscreen(wx, wy);
+        initWall(map, wall);
+        initBall(ball);
+        score=0;
+        key=getch();
+        while (score!=26 and touchMap(map, ball)!=4)
+        {
+            // page management //
+            setactivepage(page);
+            cleardevice();
+            setvisualpage(1-page);
+            /////////////////////
 
-        //check for events and change direction
-        setSpeed(ball, touchPlatform(ball, platform), touchMap(map, ball), touchBrick(ball, wall));
+            //get the score
+            score=getScore(wall);
 
-        // move objects
-        moveBall(ball);
-        movePlatform(platform, map);
+            //draw the objects
+            drawMap(map);
+            drawScoreboard(wall, score);
+            drawBall(ball);
+            drawWall(wall);
+            drawPlatform(platform);
 
-        // page management //
-        page=1-page;
-        /////////////////////
+            //check for events and change direction of ball
 
-        delay(1);
-        //getch();
+            setSpeed(ball, touchPlatform(ball, platform), touchMap(map, ball), touchBrick(ball, wall));
+
+            // move objects
+            moveBall(ball);
+            movePlatform(platform, map);
+
+            // page management //
+            page=1-page;
+            /////////////////////
+            delay(2);
+            //getch();
+        }
+        if (score==26) winScreen(wx, wy, score);
+        else gameover(wx, wy, score);
+
+        key=getch();
     }
 
     return 0;
