@@ -8,9 +8,9 @@
 #include "time.h"
 
 void drawBrick(s_brick brick, int c)
-{setfillstyle(1, c);
+{
+    setfillstyle(1, c);
     bar(brick.left, brick.top, brick.right, brick.bottom);
-
     //floodfill(brick.left+2, brick.top+2, c);
     setfillstyle(1, 15);
 }
@@ -73,7 +73,6 @@ void initWall(s_map map, s_brick wall[4][5]) //initialises the wall made out of 
         if (wall[r1][r2].count>1) i--;
         else wall[r1][r2].count=3;
     }
-
 }
 
 int touchBrick(s_ball ball, s_brick wall[4][5])
@@ -86,25 +85,23 @@ int touchBrick(s_ball ball, s_brick wall[4][5])
             if (wall[i][j].count>0)
             {
                 if (touchCorner(ball, wall[i][j].left, wall[i][j].top)==1 || touchCorner(ball, wall[i][j].top, wall[i][j].right)==1 ||
-                touchCorner(ball, wall[i][j].right, wall[i][j].bottom)==1 || touchCorner(ball, wall[i][j].left, wall[i][j].bottom)==1) //todo osszes sarok
-            {
-                wall[i][j].count--;
-                state=1;          // touches any corner
-            }
-            else
-            if (touchVerticalLine(ball, wall[i][j].left, wall[i][j].top, wall[i][j].left, wall[i][j].bottom)==1 ||
-                 touchVerticalLine(ball, wall[i][j].right, wall[i][j].top, wall[i][j].right, wall[i][j].bottom)==1)
-            {
-                wall[i][j].count--;
-                state=2;        // touches any vertical side of a brick
-            }
-            else
-            if (touchHorizontalLine(ball, wall[i][j].left, wall[i][j].top, wall[i][j].right, wall[i][j].top)==1 ||
-                 touchHorizontalLine(ball, wall[i][j].left, wall[i][j].bottom, wall[i][j].right, wall[i][j].bottom)==1)
-            {
-                wall[i][j].count--;
-                state=3;        // touches any horizontal side of a brick
-            }
+                        touchCorner(ball, wall[i][j].right, wall[i][j].bottom)==1 || touchCorner(ball, wall[i][j].left, wall[i][j].bottom)==1) //todo osszes sarok
+                {
+                    wall[i][j].count--;
+                    state=1;          // touches any corner
+                }
+                else if (touchVerticalLine(ball, wall[i][j].left, wall[i][j].top, wall[i][j].left, wall[i][j].bottom)==1 ||
+                         touchVerticalLine(ball, wall[i][j].right, wall[i][j].top, wall[i][j].right, wall[i][j].bottom)==1)
+                {
+                    wall[i][j].count--;
+                    state=2;        // touches any vertical side of a brick
+                }
+                else if (touchHorizontalLine(ball, wall[i][j].left, wall[i][j].top, wall[i][j].right, wall[i][j].top)==1 ||
+                         touchHorizontalLine(ball, wall[i][j].left, wall[i][j].bottom, wall[i][j].right, wall[i][j].bottom)==1)
+                {
+                    wall[i][j].count--;
+                    state=3;        // touches any horizontal side of a brick
+                }
             }
         }
     }

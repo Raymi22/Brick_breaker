@@ -1,12 +1,15 @@
 #include "bscore.h"
+#include <stdio.h>
 
-void drawScoreboard(s_brick wall[4][5])
+void drawScoreboard(s_brick wall[4][5], int s)
 {
+    char vs[2];
+    sprintf(vs, "%d", s);
     char *title[15]={"Brick Breaker"};
     char *score[15]={"Score"};
-    char *vscore[2]={"10"};
+    char *vscore[2]={vs};
 
-    rectangle(0, 0, 500, 50);
+    rectangle(0, 0, 499, 50);
     settextjustify(1, 1);  //positions text
     settextstyle(4, 0, 3);
     outtextxy(250, 25, *title);
@@ -28,6 +31,5 @@ int getScore(s_brick wall[4][5])
         for (int j=0; j<5; j++)
         s-=wall[i][j].count;
     }
-
     return s;
 }
