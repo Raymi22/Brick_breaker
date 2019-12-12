@@ -41,7 +41,7 @@ void drawWall(s_brick wall[4][5])
 
 void initWall(s_map map, s_brick wall[4][5]) //initialises the wall made out of 20 bricks
 {
-    int xstart=map.left+5, ystart=map.top+5, blength=94, bwidth=45;
+    int xstart=map.left+5, ystart=map.top+5, blength=94, bwidth=40;
     for (int i=0; i<4; i++)
     {
         for (int j=0; j<5; j++)

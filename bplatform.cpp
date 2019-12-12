@@ -5,7 +5,7 @@
 
 
 
-void movePlatform( s_platform &platform, s_map map )    //platform mozgatasa fuggveny
+void movePlatform( s_platform *platform, s_map map )    //platform mozgatasa fuggveny
 {
     char key;
      if (kbhit())   //ha le volt utve egy billentyu
@@ -13,24 +13,24 @@ void movePlatform( s_platform &platform, s_map map )    //platform mozgatasa fug
         key = toupper(getch());     //leutott billentyut nagybetusra alakit
 
         if (key==KEY_LEFT){          //balra mozgataskor
-            if (platform.left>map.left){
-                platform.left=platform.left-20;                  //mozog 5 pixelt balra
-                platform.right=platform.right-20;
+            if (platform->left>map.left){
+                platform->left=platform->left-20;                  //mozog 5 pixelt balra
+                platform->right=platform->right-20;
             }
             else{
-                platform.left=platform.left;                  //mozog 5 pixelt balra
-                platform.right=platform.right;
+                platform->left=platform->left;                  //mozog 5 pixelt balra
+                platform->right=platform->right;
             }
         }
 
         if (key==KEY_RIGHT){             //jobbra mozgataskor
-            if (platform.right<map.right){
-                platform.left=platform.left+20;
-                platform.right=platform.right+20;
+            if (platform->right<map.right){
+                platform->left=platform->left+20;
+                platform->right=platform->right+20;
             }
             else{
-                platform.left=platform.left;                  //mozog 5 pixelt balra
-                platform.right=platform.right;
+                platform->left=platform->left;                  //mozog 5 pixelt balra
+                platform->right=platform->right;
             }
         }
     }

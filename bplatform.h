@@ -13,7 +13,7 @@ typedef struct
 //int touchPlatform(s_ball ball, s_platform platform);
 
 void drawPlatform(s_platform platform);
-void movePlatform(s_platform &platform, s_map map);
+void movePlatform(s_platform *platform, s_map map);
 ///viola
 int touchPlatform(s_ball ball, s_platform platform);
 
