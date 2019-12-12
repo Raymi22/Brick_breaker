@@ -17,7 +17,6 @@ int wx=500, wy=600;
 s_ball ball; //ball
 s_platform platform ={wx/2-40, wy-5-25, wx/2+40, wy-5}; // platform
 s_map map={0, 50, wx-1, wy};  // map
-
 s_brick wall[4][5];
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -29,14 +28,13 @@ int main()
     initwindow(wx,wy);
     char key='a';
     int page=0;
-
     int score=0;
 
     while(key!='x')
     {
         startscreen();
         initWall(map, wall);
-        initBall(ball);
+        initBall(&ball);
         score=0;
         key=getch();
         while (score!=26 and touchMap(map, ball)!=4)
@@ -59,11 +57,11 @@ int main()
 
             //check for events and change direction of ball
 
-            setSpeed(ball, touchPlatform(ball, platform), touchMap(map, ball), touchBrick(ball, wall));
+            setSpeed(&ball, touchPlatform(ball, platform), touchMap(map, ball), touchBrick(ball, wall));
 
             // move objects
-            moveBall(ball);
-            movePlatform(platform, map);
+            moveBall(&ball);
+            movePlatform(&platform, map);
 
             // page management //
             page=1-page;

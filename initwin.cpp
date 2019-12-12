@@ -25,7 +25,7 @@ void winScreen(int s)
     setvisualpage(1);
     cleardevice();
 
-    int x1=250, y1=100;
+
 
     char vs[3];
     int tens=s/10;
@@ -35,17 +35,18 @@ void winScreen(int s)
     vs[3]=' ';
     char *vscore=vs;
 
+    int x1=250, y1=100;
     settextjustify(CENTER_TEXT, CENTER_TEXT);
 
     settextstyle(8, HORIZ_DIR, 6);
-    outtextxy(x1, y1, "You lost!");
+    outtextxy(x1, y1, "You won!");
 
     settextstyle(8, HORIZ_DIR, 3);
     outtextxy(x1, y1+150, "Your score is:");
     outtextxy(x1, y1+200, vscore);
 
     settextstyle(8, HORIZ_DIR, 1);
-    outtextxy(x1, y1+300, "Press X to exit or R to start a new game");
+    outtextxy(x1, y1+300, "Press X to exit or 1, 2, 3 to choose another map.");
 }
 
 void gameover(int s)
@@ -54,7 +55,7 @@ void gameover(int s)
     setvisualpage(1);
     cleardevice();
 
-    int x1=250, y1=100;
+
 
     char vs[3];
     int tens=s/10;
@@ -64,6 +65,7 @@ void gameover(int s)
     vs[3]=' ';
     char *vscore=vs;
 
+    int x1=250, y1=100;
     settextjustify(CENTER_TEXT, CENTER_TEXT);
 
     settextstyle(8, HORIZ_DIR, 6);
@@ -71,8 +73,12 @@ void gameover(int s)
 
     settextstyle(8, HORIZ_DIR, 3);
     outtextxy(x1, y1+150, "Your score is:");
+
+
     outtextxy(x1, y1+200, vscore);
+    settextstyle(8, HORIZ_DIR, 1);
+    outtextxy(x1, y1+300, "Press X to exit.");
 
     settextstyle(8, HORIZ_DIR, 1);
-    outtextxy(x1, y1+300, "Press X to exit or R to start a new game");
+    outtextxy(x1, y1+350, "Press 1, 2 or 3 to choose another map.");
 }
