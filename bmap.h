@@ -18,6 +18,6 @@ void drawMap(s_map map);
 
 int touchMap(s_map map, s_ball ball);
 
-
+void initMap(s_map *map, int wx, int wy);
 
 #endif // BMAP_H_INCLUDED

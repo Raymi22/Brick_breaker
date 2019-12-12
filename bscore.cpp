@@ -29,10 +29,10 @@ void drawScoreboard(s_brick wall[4][5], int s)
     outtextxy(500-25, 40, vscore);
 }
 
-int getScore(s_brick wall[4][5])
+int getScore(s_brick wall[5][5])
 {
     int s=26;
-    for (int i=0; i<4; i++)
+    for (int i=0; i<5; i++)
     {
         for (int j=0; j<5; j++)
         s-=wall[i][j].count;
