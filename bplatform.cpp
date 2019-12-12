@@ -38,8 +38,8 @@ void movePlatform( s_platform &platform, s_map map )    //platform mozgatasa fug
 
 void drawPlatform( s_platform platform ) //platform rajzolasa fuggveny
 {
+    setfillstyle(SOLID_FILL,3); //all will be colored by green hopsz
     bar( platform.left, platform.top, platform.right, platform.bottom );
-    setfillstyle(SOLID_FILL,GREEN); //all will be colored by green hopsz
 }
 
 ///viola

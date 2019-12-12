@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <graphics.h>
 
-void startscreen(int x, int y);
-void winScreen(int x, int y, int s);
-void gameover(int x, int y, int s);
+void startscreen();
+void winScreen(int s);
+void gameover(int s);
 
 #endif // INITWIN_H_INCLUDED

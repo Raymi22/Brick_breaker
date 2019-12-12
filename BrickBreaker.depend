@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1576169391 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\main.cpp
+	<stdio.h>
+	<graphics.h>
+	"bball.h"
+	"bplatform.h"
+	"bmap.h"
+	"bscore.h"
+	"bbrick2.h"
+	"initwin.h"
+
+1576146924 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bball.h
+	<graphics.h>
+
+1576155256 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bball.cpp
+	<graphics.h>
+	"bball.h"
+	<stdio.h>
+
+1575047341 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick.cpp
+
+1576156223 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bplatform.cpp
+	<graphics.h>
+	"bball.h"
+	"bplatform.h"
+	"bmap.h"
+
+1575913708 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bplatform.h
+	"bball.h"
+	"bcollisions.h"
+	"bmap.h"
+
+1576095058 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bmap.h
+	"bball.h"
+	"bcollisions.h"
+
+1575985420 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bmap.cpp
+	<graphics.h>
+	"bmap.h"
+
+1575959871 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick.h
+	<graphics.h>
+
+1576082548 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bscore.h
+	"bbrick2.h"
+
+1576168685 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bscore.cpp
+	"bscore.h"
+	<stdio.h>
+
+1576078982 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bcollisions.cpp
+	"bcollisions.h"
+	<stdio.h>
+	<math.h>
+
+1575965539 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bcollisions.h
+	<math.h>
+	"bball.h"
+
+1576093341 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick2.cpp
+	<graphics.h>
+	<stdio.h>
+	"bbrick2.h"
+	"bcollisions.h"
+	"time.h"
+
+1575962728 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick2.h
+	<graphics.h>
+	"bball.h"
+	"bmap.h"
+
+1576169360 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\initwin.cpp
+	"initwin.h"
+
+1576169360 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\initwin.h
+	<stdio.h>
+	<graphics.h>
+

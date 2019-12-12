@@ -27,21 +27,21 @@ s_brick wall[4][5];
 int main()
 {
     initwindow(wx,wy);
-    char key=getch();
+    char key='a';
     int page=0;
 
     int score=0;
 
     while(key!='x')
     {
-        startscreen(wx, wy);
+        startscreen();
         initWall(map, wall);
         initBall(ball);
         score=0;
         key=getch();
         while (score!=26 and touchMap(map, ball)!=4)
         {
-            // page management //
+            // page buffering //
             setactivepage(page);
             cleardevice();
             setvisualpage(1-page);
@@ -68,12 +68,12 @@ int main()
             // page management //
             page=1-page;
             /////////////////////
-            delay(2);
+            delay(10);
             //getch();
         }
-        if (score==26) winScreen(wx, wy, score);
-        else gameover(wx, wy, score);
-
+        if (score==26) winScreen(score);
+        else gameover(score);
+        delay(1000);
         key=getch();
     }
 

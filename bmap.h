@@ -1,3 +1,8 @@
+/**************************************/
+/* bball.h - contains functions related to the scoreboard and score calculation. */
+/* Author: Nemeth Raymond */
+/**************************************/
+
 #ifndef BMAP_H_INCLUDED
 #define BMAP_H_INCLUDED
 
