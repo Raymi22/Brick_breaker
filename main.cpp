@@ -26,14 +26,14 @@ s_brick wall[4][5];
 int main()
 {
     initwindow(wx,wy);
-    char key='a';
+    char key='1';
     int page=0;
     int score=0;
 
     while(key!='x')
     {
         startscreen();
-        initWall(map, wall);
+        initWall(map, wall, key-'0');
         initBall(&ball);
         score=0;
         key=getch();

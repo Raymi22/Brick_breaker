@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1576175281 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\main.cpp
+1576191290 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\main.cpp
 	<stdio.h>
 	<graphics.h>
 	"bball.h"
@@ -30,7 +30,7 @@
 	"bcollisions.h"
 	"bmap.h"
 
-1576095058 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bmap.h
+1576188115 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bmap.h
 	"bball.h"
 	"bcollisions.h"
 
@@ -45,7 +45,7 @@
 1576082548 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bscore.h
 	"bbrick2.h"
 
-1576168685 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bscore.cpp
+1576191815 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bscore.cpp
 	"bscore.h"
 	<stdio.h>
 
@@ -58,19 +58,19 @@
 	<math.h>
 	"bball.h"
 
-1576176420 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick2.cpp
+1576190856 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick2.cpp
 	<graphics.h>
 	<stdio.h>
 	"bbrick2.h"
 	"bcollisions.h"
 	"time.h"
 
-1575962728 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick2.h
+1576188115 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick2.h
 	<graphics.h>
 	"bball.h"
 	"bmap.h"
 
-1576176091 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\initwin.cpp
+1576184965 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\initwin.cpp
 	"initwin.h"
 
 1576169360 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\initwin.h

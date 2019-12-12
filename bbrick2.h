@@ -12,13 +12,13 @@ typedef struct
 } s_brick;
 
 
-void initWall(s_map map, s_brick wall[4][5]); //draws the wall made out of 20 bricks
+void initWall(s_map map, s_brick wall[5][5], int mapOption); //draws the wall made out of 20 bricks
 
 void drawBrick(s_brick brick, int c);// draws one brick
 
-void drawWall(s_brick wall[4][5]);
+void drawWall(s_brick wall[5][5]);
 
-int touchBrick(s_ball ball, s_brick wall[4][5]); //checks the collision between ball and bricks
+int touchBrick(s_ball ball, s_brick wall[5][5]); //checks the collision between ball and bricks
 
 
 
