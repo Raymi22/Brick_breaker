@@ -11,7 +11,6 @@ void drawBrick(s_brick brick, int c)
 {
     setfillstyle(1, c);
     bar(brick.left, brick.top, brick.right, brick.bottom);
-    //floodfill(brick.left+2, brick.top+2, c);
     setfillstyle(1, 15);
 }
 
@@ -42,14 +41,14 @@ void drawWall(s_brick wall[4][5])
 
 void initWall(s_map map, s_brick wall[4][5]) //initialises the wall made out of 20 bricks
 {
-    int xstart=map.left+5, ystart=map.top, blength=94, bwidth=40;
+    int xstart=map.left+5, ystart=map.top+5, blength=94, bwidth=45;
     for (int i=0; i<4; i++)
     {
         for (int j=0; j<5; j++)
         {
 
             wall[i][j].left=(j+1)*xstart+j*blength;
-            wall[i][j].top=(i+1)*ystart+bwidth;
+            wall[i][j].top=(i+1)*ystart;
             wall[i][j].right=blength+wall[i][j].left;
             wall[i][j].bottom=bwidth+wall[i][j].top;
             wall[i][j].count=1;
@@ -61,7 +60,6 @@ void initWall(s_map map, s_brick wall[4][5]) //initialises the wall made out of 
     {
         r1=rand()%4;
         r2=rand()%5;
-        printf("%d %d \n", r1, r2);
         if (wall[r1][r2].count>1) i--;
         else wall[r1][r2].count=2;
     }
@@ -84,7 +82,7 @@ int touchBrick(s_ball ball, s_brick wall[4][5])
         {
             if (wall[i][j].count>0)
             {
-                if (touchCorner(ball, wall[i][j].left, wall[i][j].top)==1 || touchCorner(ball, wall[i][j].top, wall[i][j].right)==1 ||
+                if (touchCorner(ball, wall[i][j].left, wall[i][j].top)==1 || touchCorner(ball, wall[i][j].right==1, wall[i][j].top) ||
                         touchCorner(ball, wall[i][j].right, wall[i][j].bottom)==1 || touchCorner(ball, wall[i][j].left, wall[i][j].bottom)==1) //todo osszes sarok
                 {
                     wall[i][j].count--;

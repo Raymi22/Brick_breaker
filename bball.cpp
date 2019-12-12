@@ -1,49 +1,6 @@
 #include <graphics.h>
 #include "bball.h"
-
-/*int touchBorder(s_ball ball, s_map map)
-{
-    // Checks for any collision between ball and borders //
-    int state=0;
-    if (ball.x+ball.r>=map.right)// right side
-    {
-        if (ball.y-ball.r<=map.top) state = 5;             // top right corner -> 5
-        else if (ball.y+ball.r>=map.bottom) state = 6;     // bottom right corner -> 6
-        else state = 1;                                    // right side -> 1
-    }
-    else if (ball.x-ball.r<=map.left ) //left side
-    {
-        if (ball.y-ball.r<=map.top) state = 7;              // top left corner -> 7
-        else if (ball.y+ball.r>=map.bottom) state = 8;      // bottom left corner -> 8
-        else state = 2;                                     // left side -> 2
-    }
-    else if (ball.y+ball.r>=map.bottom) state = 3;          // bottom -> 3
-    else if (ball.y-ball.r<=map.top) state = 4;             // top -> 4
-    return state;
-}
-*/
-
-//  REBUT !!!!!!!!
-/*int touchPlatform(s_ball ball, s_platform platform) //  REBUT !!!!!!!!
-{
-    int state=0;                                            // 0 if ball and platform do not collide
-    if (ball.y+ball.r==platform.top)
-    {
-        if (ball.x<=platform.right && ball.x>=platform.left) state=1; //ball touches top of platform
-    }
-    if (ball.y+ball.r>=platform.top and ball.y<platform.top)
-    {
-        if (ball.x-ball.r<=platform.right and ball.x>platform.right) state=2; //lower half of ball touches right side of platform
-        else if (ball.x-ball.r<=platform.left and ball.x>platform.left) state=3; //lower half of ball touches left side of ball
-    }
-    else if (ball.y>platform.top)
-    {
-        if (ball.x-ball.r==platform.right || ball.x+ball.r==platform.left) state=4; //other sides of the ball touch the platform
-    }
-    return state;
-}*/
-
-
+#include <stdio.h>
 
 void setSpeed(s_ball &ball, int platformEvent, int mapEvent, int brickEvent)
 {
@@ -64,8 +21,9 @@ void moveBall( s_ball &ball )
 
 void drawBall( s_ball &ball )
 {
-    circle( ball.x, ball.y, ball.r );
-    //floodfill( ball.x, ball.y, 15 );
+    setfillstyle(1, 15);
+    fillellipse( ball.x, ball.y, ball.r, ball.r );
+    printf("%d, %d, %d\n", ball.x, ball.y, ball.r);
 }
 
 void initBall(s_ball &ball)

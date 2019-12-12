@@ -77,7 +77,9 @@ int touchBrick(s_ball ball, s_brick wall[4][5])
     {
         for (int j=0;j<5;j++)
         {
-            if (touchCorner(ball, wall[i][j].left, wall[i][j].top)==1 || touchCorner(ball, wall[i][j].top, wall[i][j].right)==1 ||
+            if (wall[i][j].count>0)
+            {
+                if (touchCorner(ball, wall[i][j].left, wall[i][j].top)==1 || touchCorner(ball, wall[i][j].top, wall[i][j].right)==1 ||
             touchCorner(ball, wall[i][j].right, wall[i][j].bottom)==1 || touchCorner(ball, wall[i][j].left, wall[i][j].bottom)==1) //todo osszes sarok
             {
                 wall[i][j].count--;
@@ -96,6 +98,7 @@ int touchBrick(s_ball ball, s_brick wall[4][5])
             {
                 wall[i][j].count--;
                 state=3;        // touches any horizontal side of a brick
+            }
             }
         }
     }
