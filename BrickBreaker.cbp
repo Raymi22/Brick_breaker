@@ -34,8 +34,8 @@
 		</Compiler>
 		<Unit filename="bball.cpp" />
 		<Unit filename="bball.h" />
-		<Unit filename="bbrick.cpp" />
-		<Unit filename="bbrick.h" />
+		<Unit filename="bbrick2.cpp" />
+		<Unit filename="bbrick2.h" />
 		<Unit filename="bcollisions.cpp" />
 		<Unit filename="bcollisions.h" />
 		<Unit filename="bmap.cpp" />
@@ -44,6 +44,8 @@
 		<Unit filename="bplatform.h" />
 		<Unit filename="bscore.cpp" />
 		<Unit filename="bscore.h" />
+		<Unit filename="initwin.cpp" />
+		<Unit filename="initwin.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

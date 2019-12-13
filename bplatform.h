@@ -1,3 +1,8 @@
+/**************************************/
+/* bplatform.h - contains functions related to the platform */
+/* Author: Feleki Viola */
+/**************************************/
+
 #ifndef BPLATFORM_H_INCLUDED
 #define BPLATFORM_H_INCLUDED
 
@@ -10,11 +15,9 @@ typedef struct
     int left, top, right, bottom;
 } s_platform;
 
-//int touchPlatform(s_ball ball, s_platform platform);
-
+void initPlatform(s_platform *platform, int wx, int wy);
 void drawPlatform(s_platform platform);
 void movePlatform(s_platform *platform, s_map map);
-///viola
 int touchPlatform(s_ball ball, s_platform platform);
 
 #endif // BPLATFORM_H_INCLUDED

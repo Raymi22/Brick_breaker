@@ -16,7 +16,6 @@ typedef struct
     int xSpeed, ySpeed;
 } s_ball;
 
-
 void drawBall (s_ball ball);
 void setSpeed (s_ball *ball, int platformEvent, int mapEvent, int brickEvent);
 void moveBall (s_ball *ball);

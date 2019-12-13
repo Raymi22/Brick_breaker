@@ -1,3 +1,8 @@
+/**************************************/
+/* initwin.h - contains functions related to the windows */
+/* Author: Feleki Viola */
+/**************************************/
+
 #ifndef INITWIN_H_INCLUDED
 #define INITWIN_H_INCLUDED
 

@@ -42,7 +42,7 @@ void drawWall(s_brick wall[5][5])
 
 void initWall(s_map map, s_brick wall[5][5], int mapoption) //initialises the wall made out of 20 bricks
 {
-    int xstart=map.left+5, ystart=map.top+5, blength=94, bwidth=40;
+    int xstart=map.left, ystart=map.top, blength=94, bwidth=40;
     int spacing=5;
     int r1=0, r2=0;
     for (int i=0; i<5; i++)
@@ -62,16 +62,15 @@ void initWall(s_map map, s_brick wall[5][5], int mapoption) //initialises the wa
     {
 
     case 1:
-        for (int i=0; i<5; i++)
+        for (int i=0; i<4; i++)
         {
             for (int j=0; j<5; j++)
                 wall[i][j].count=1;
         }
         srand(time(NULL));
-        //int r1, r2;
         for (int i=0; i<2; i++)
         {
-            r1=rand()%5;
+            r1=rand()%4;
             r2=rand()%5;
             if (wall[r1][r2].count>1) i--;
             else wall[r1][r2].count=2;
@@ -79,7 +78,7 @@ void initWall(s_map map, s_brick wall[5][5], int mapoption) //initialises the wa
         srand(time(NULL));
         for (int i=0; i<2; i++)
         {
-            r1=rand()%5;
+            r1=rand()%4;
             r2=rand()%5;
             if (wall[r1][r2].count>1) i--;
             else wall[r1][r2].count=3;

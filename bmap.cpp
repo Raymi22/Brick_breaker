@@ -24,4 +24,11 @@ int touchMap(s_map map, s_ball ball)
     return 0; // ball does not touch anything
 }
 
+void initMap(s_map *map, int wx, int wy)
+{
+    map->left=0;
+    map->top=50;
+    map->right=wx-1;
+    map->bottom=wy;
+}
 

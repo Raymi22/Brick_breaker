@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1576191290 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\main.cpp
+1576224380 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\main.cpp
 	<stdio.h>
 	<graphics.h>
 	"bball.h"
@@ -9,7 +9,7 @@
 	"bbrick2.h"
 	"initwin.h"
 
-1576171960 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bball.h
+1576195526 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bball.h
 	<graphics.h>
 
 1576175142 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bball.cpp
@@ -19,13 +19,13 @@
 
 1575047341 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick.cpp
 
-1576175262 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bplatform.cpp
+1576223962 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bplatform.cpp
 	<graphics.h>
 	"bball.h"
 	"bplatform.h"
 	"bmap.h"
 
-1576175352 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bplatform.h
+1576224708 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bplatform.h
 	"bball.h"
 	"bcollisions.h"
 	"bmap.h"
@@ -34,7 +34,7 @@
 	"bball.h"
 	"bcollisions.h"
 
-1576175816 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bmap.cpp
+1576193484 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bmap.cpp
 	<graphics.h>
 	<stdio.h>
 	"bmap.h"
@@ -58,7 +58,7 @@
 	<math.h>
 	"bball.h"
 
-1576190856 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick2.cpp
+1576193943 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\bbrick2.cpp
 	<graphics.h>
 	<stdio.h>
 	"bbrick2.h"
@@ -70,10 +70,10 @@
 	"bball.h"
 	"bmap.h"
 
-1576184965 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\initwin.cpp
+1576224300 source:d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\initwin.cpp
 	"initwin.h"
 
-1576169360 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\initwin.h
+1576224650 d:\onedrive - student.utcluj.ro\projects\info\brickbreaker\initwin.h
 	<stdio.h>
 	<graphics.h>
 
