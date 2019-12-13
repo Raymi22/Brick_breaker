@@ -7,25 +7,21 @@
 #include "bbrick2.h"
 #include "initwin.h"
 
-
-
 using namespace std;
 ////////////////////////////////// Window parameters //////////////////////////////////
 int wx=500, wy=600;
 ///////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////// Object parameters ////////////////////////////////////
+//////////////////////////////// Objects ////////////////////////////////////
 s_ball ball; //ball
-s_platform platform ={wx/2-40, wy-5-25, wx/2+40, wy-5}; // platform
-s_map map={0, 50, wx-1, wy};  // map
+s_platform platform; // platform
+s_map map; // map
 s_brick wall[4][5];
 ///////////////////////////////////////////////////////////////////////////////////////
-
-
-
 
 int main()
 {
     initwindow(wx,wy);
+    initMap(&map, wx, wy);
     char key='1';
     int page=0;
     int score=0;
@@ -35,6 +31,7 @@ int main()
         startscreen();
         initWall(map, wall, key-'0');
         initBall(&ball);
+        initPlatform(&platform, wx, wy);
         score=0;
         key=getch();
         while (score!=26 and touchMap(map, ball)!=4)
@@ -56,7 +53,6 @@ int main()
             drawPlatform(platform);
 
             //check for events and change direction of ball
-
             setSpeed(&ball, touchPlatform(ball, platform), touchMap(map, ball), touchBrick(ball, wall));
 
             // move objects
@@ -67,7 +63,6 @@ int main()
             page=1-page;
             /////////////////////
             delay(10);
-            //getch();
         }
         if (score==26) winScreen(score);
         else gameover(score);

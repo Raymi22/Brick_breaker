@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="bball.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="1889" topLine="39" />
+	<File name="bball.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="420" topLine="0" />
 	</File>
-	<File name="bball.h" open="1" top="0" tabpos="4">
-		<Cursor position="247" topLine="0" />
+	<File name="bball.h" open="1" top="0" tabpos="15">
+		<Cursor position="270" topLine="8" />
 	</File>
-	<File name="bbrick.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="0" topLine="0" />
+	<File name="bbrick2.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="1931" topLine="0" />
 	</File>
-	<File name="bbrick.h" open="1" top="0" tabpos="13">
-		<Cursor position="0" topLine="0" />
+	<File name="bbrick2.h" open="1" top="0" tabpos="12">
+		<Cursor position="208" topLine="5" />
 	</File>
-	<File name="bcollisions.cpp" open="1" top="0" tabpos="12">
-		<Cursor position="343" topLine="0" />
+	<File name="bcollisions.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="530" topLine="7" />
 	</File>
-	<File name="bcollisions.h" open="1" top="0" tabpos="11">
-		<Cursor position="81" topLine="0" />
+	<File name="bcollisions.h" open="1" top="0" tabpos="9">
+		<Cursor position="453" topLine="0" />
 	</File>
-	<File name="bmap.cpp" open="1" top="0" tabpos="10">
-		<Cursor position="339" topLine="3" />
+	<File name="bmap.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="1038" topLine="16" />
 	</File>
-	<File name="bmap.h" open="1" top="0" tabpos="9">
-		<Cursor position="70" topLine="0" />
+	<File name="bmap.h" open="1" top="0" tabpos="7">
+		<Cursor position="476" topLine="5" />
 	</File>
-	<File name="bplatform.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="1613" topLine="0" />
+	<File name="bplatform.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="338" topLine="6" />
 	</File>
-	<File name="bplatform.h" open="1" top="1" tabpos="5">
-		<Cursor position="106" topLine="0" />
+	<File name="bplatform.h" open="1" top="0" tabpos="3">
+		<Cursor position="346" topLine="0" />
 	</File>
-	<File name="bscore.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="181" topLine="0" />
+	<File name="bscore.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="770" topLine="23" />
 	</File>
-	<File name="bscore.h" open="1" top="0" tabpos="8">
-		<Cursor position="274" topLine="0" />
+	<File name="bscore.h" open="1" top="0" tabpos="5">
+		<Cursor position="281" topLine="0" />
+	</File>
+	<File name="initwin.cpp" open="1" top="0" tabpos="14">
+		<Cursor position="1191" topLine="54" />
+	</File>
+	<File name="initwin.h" open="1" top="1" tabpos="13">
+		<Cursor position="103" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="649" topLine="40" />
+		<Cursor position="1991" topLine="56" />
 	</File>
 </CodeBlocks_layout_file>

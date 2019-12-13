@@ -26,7 +26,6 @@ void winScreen(int s)
     cleardevice();
 
 
-
     char vs[3];
     int tens=s/10;
     int units=s%10;
@@ -73,9 +72,8 @@ void gameover(int s)
 
     settextstyle(8, HORIZ_DIR, 3);
     outtextxy(x1, y1+150, "Your score is:");
-
-
     outtextxy(x1, y1+200, vscore);
+
     settextstyle(8, HORIZ_DIR, 1);
     outtextxy(x1, y1+300, "Press X to exit.");
 
