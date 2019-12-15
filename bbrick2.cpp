@@ -7,7 +7,7 @@
 #include "bcollisions.h"
 #include "time.h"
 
-void drawBrick(s_brick brick, int c)
+void drawBrick(s_brick brick, int c) //DRAWS A BRICK
 {
     setfillstyle(1, c);
     bar(brick.left, brick.top, brick.right, brick.bottom);
@@ -15,7 +15,7 @@ void drawBrick(s_brick brick, int c)
     setfillstyle(1, 15);
 }
 
-void drawWall(s_brick wall[5][5])
+void drawWall(s_brick wall[5][5])  //DRAWS THE WHOLE WALL DEPENDING FROM THE MAPOPTION
 {
     for (int i=0; i<5; i++)
     {
@@ -40,7 +40,7 @@ void drawWall(s_brick wall[5][5])
 
 }
 
-void initWall(s_map map, s_brick wall[5][5], int mapoption) //initialises the wall made out of 20 bricks
+void initWall(s_map map, s_brick wall[5][5], int mapoption) //INITIALISES THE WHOLE WALL DEPENDING FROM THE MAPOPTION
 {
     int xstart=map.left, ystart=map.top, blength=94, bwidth=40;
     int spacing=5;
@@ -58,7 +58,7 @@ void initWall(s_map map, s_brick wall[5][5], int mapoption) //initialises the wa
         }
     }
 
-    switch(mapoption)
+    switch(mapoption) //SWITCHES BETWEEN THE 3 GAME MAPS
     {
 
     case 1:
@@ -67,7 +67,7 @@ void initWall(s_map map, s_brick wall[5][5], int mapoption) //initialises the wa
             for (int j=0; j<5; j++)
                 wall[i][j].count=1;
         }
-        srand(time(NULL));
+        srand(time(NULL));  //GENERATES RANDOMLY SOME BRICKS
         for (int i=0; i<2; i++)
         {
             r1=rand()%4;
@@ -154,7 +154,7 @@ void initWall(s_map map, s_brick wall[5][5], int mapoption) //initialises the wa
     break;
     }
 }
-int touchBrick(s_ball ball, s_brick wall[5][5])
+int touchBrick(s_ball ball, s_brick wall[5][5])  //CHECKS THE COLLISION BETWEEN THE BALL AND THE DIFFERENT SIDES OF THE BRICK
 {
     int state=0; //no collision
     for(int i=0; i<5; i++)

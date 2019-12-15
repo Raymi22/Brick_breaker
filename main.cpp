@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <graphics.h>
+#include <string.h>
+
 #include "bball.h"
 #include "bplatform.h"
 #include "bmap.h"
@@ -67,7 +69,17 @@ int main()
         if (score==26) winScreen(score);
         else gameover(score);
         delay(1000);
-        key=getch();
+
+        ////////////GETTING THEE RIGHT KEYBOARD VALUES//////////////
+        char *result=NULL;
+        char string[]="x123";
+        do
+        {
+            key=getch();
+            result=strchr(string, key);
+        }
+        while(result==NULL);
+        /////////////////////////////////////////////////////////////
     }
 
     return 0;

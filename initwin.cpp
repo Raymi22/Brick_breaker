@@ -45,7 +45,10 @@ void winScreen(int s)
     outtextxy(x1, y1+200, vscore);
 
     settextstyle(8, HORIZ_DIR, 1);
-    outtextxy(x1, y1+300, "Press X to exit or 1, 2, 3 to choose another map.");
+    outtextxy(x1, y1+300, "Press X to exit.");
+
+    settextstyle(8, HORIZ_DIR, 1);
+    outtextxy(x1, y1+350, "Press 1, 2 or 3 to choose another map.");
 }
 
 void gameover(int s)
